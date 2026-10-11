@@ -27,5 +27,6 @@ Closes #
 
 - [ ] CI green
 - [ ] New behaviour has unit tests
+- [ ] Nothing that differs between online and on-prem is hard-coded (hosts, registries, URLs)
 - [ ] Docs point to sources rather than copying them (`CLAUDE.md`); new terms in `CONTEXT.md`; an ADR for any hard-to-reverse decision
 - [ ] **<kind of change>:** <project-specific check>
