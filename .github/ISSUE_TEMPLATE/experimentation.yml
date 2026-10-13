@@ -1,0 +1,42 @@
+name: Experimentation
+description: Try something out and write down what was found
+type: Experimentation
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title: state the outcome, not the area (e.g. "Upgrade the build image to Node 22", not "Build image").
+        Assign one owner with *Assignees* before work starts.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What you want to find out, and what decision the answer feeds.
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Approach
+      description: What to try, and where to stop (a time box or a point where the answer is clear enough).
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What to hand over, one per line, such as a PR, a doc or a decision written in this issue. The issue is done when every line is ticked.
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links, related issues, people to check with, constraints.

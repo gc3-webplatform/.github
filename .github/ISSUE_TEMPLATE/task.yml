@@ -1,0 +1,34 @@
+name: Task
+description: A piece of work that fits no other form
+type: Task
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title: state the outcome, not the area (e.g. "Upgrade the build image to Node 22", not "Build image").
+        Assign one owner with *Assignees* before work starts.
+
+  - type: textarea
+    id: intent
+    attributes:
+      label: Intent
+      description: Why this work exists, and what should be true when it's done. Enough for the owner to make sensible calls without asking.
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What to hand over, one per line, such as a PR, a doc or a decision written in this issue. The issue is done when every line is ticked.
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links, related issues, people to check with, constraints.
