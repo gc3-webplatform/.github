@@ -1,0 +1,50 @@
+name: Performance
+description: Make something faster or lighter, measured before and after
+type: Performance
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Title: state the outcome, not the area (e.g. "Upgrade the build image to Node 22", not "Build image").
+        Assign one owner with *Assignees* before work starts.
+
+  - type: textarea
+    id: intent
+    attributes:
+      label: Intent
+      description: What is too slow or too heavy, and who notices.
+    validations:
+      required: true
+
+  - type: textarea
+    id: measured-now
+    attributes:
+      label: Measured now
+      description: The number today and how it was measured (tool, environment, data size), so the same measurement can be repeated afterwards.
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: Target
+      placeholder: e.g. page load under 2 s on the test environment
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: What to hand over, one per line, such as a PR, a doc or a decision written in this issue. The issue is done when every line is ticked.
+      value: |
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links, related issues, people to check with, constraints.
